@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#123b35" />
+  <meta name="description" content="Formulário de registro de observação." />
+  <title>Registro de Observação</title>
+  <style>
+    :root { --green:#123b35; --green-2:#1d6256; --cream:#f5f3ed; --ink:#1d2926; --muted:#65736e; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:var(--cream); color:var(--ink); }
+    .topbar { height:8px; background:linear-gradient(90deg,var(--green),#76a99a); }
+    main { width:min(920px, calc(100% - 32px)); margin:42px auto 56px; }
+    .intro { background:var(--green); color:#fff; padding:32px clamp(22px,5vw,48px); border-radius:20px 20px 0 0; }
+    .eyebrow { margin:0 0 10px; color:#c7e2d9; text-transform:uppercase; letter-spacing:.14em; font-size:.72rem; font-weight:700; }
+    h1 { margin:0; font-size:clamp(1.7rem,4vw,2.5rem); line-height:1.12; }
+    .intro p:last-child { margin:12px 0 0; color:#e1eee9; line-height:1.6; max-width:650px; }
+    .form-shell { background:#fff; padding:clamp(10px,2.5vw,24px); border-radius:0 0 20px 20px; box-shadow:0 18px 55px #173c3212; }
+    .form-frame { width:100%; height:1900px; border:0; display:block; background:#fff; border-radius:12px; }
+    .fallback { margin:12px 8px 4px; color:var(--muted); font-size:.9rem; text-align:center; line-height:1.5; }
+    .fallback a { color:var(--green-2); font-weight:700; }
+    footer { text-align:center; color:var(--muted); font-size:.8rem; padding:22px 12px 0; }
+    @media(max-width:600px) { main { width:100%; margin:0 auto 28px; } .intro { border-radius:0; padding:28px 22px; } .form-shell { border-radius:0; padding:6px; } .form-frame { height:2100px; } footer { padding:18px; } }
+  </style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <main>
+    <header class="intro">
+      <p class="eyebrow">Formulário online</p>
+      <h1>Registro de Observação</h1>
+      <p>Preencha as informações solicitadas abaixo. Os dados serão enviados diretamente ao formulário original.</p>
+    </header>
+    <section class="form-shell" aria-label="Formulário de preenchimento">
+      <iframe
+        class="form-frame"
+        title="Formulário de Registro de Observação"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSc5yMm4Cetoo8dcVFSvPUXCsjTOvOLmIYvc1A_HZAGIboXQ7A/viewform?embedded=true&amp;entry.1098848666=MirantedeJoinville&amp;entry.1507732490=-26%2C29&amp;entry.1839130549=-48%2C82"
+        loading="lazy">
+        Carregando formulário…
+      </iframe>
+      <p class="fallback">Se o formulário não aparecer, <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5yMm4Cetoo8dcVFSvPUXCsjTOvOLmIYvc1A_HZAGIboXQ7A/viewform?usp=pp_url&amp;entry.1098848666=MirantedeJoinville&amp;entry.1507732490=-26%2C29&amp;entry.1839130549=-48%2C82" target="_blank" rel="noopener noreferrer">abra-o diretamente neste link</a>.</p>
+    </section>
+    <footer>© <span id="year"></span> · Registro de Observação</footer>
+  </main>
+  <script>
+    // Atualiza automaticamente o ano do rodapé.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
